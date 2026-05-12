@@ -459,11 +459,6 @@ figcaption {
   color: var(--muted);
 }
 
-.recent em {
-  color: #d9d0c2;
-  font-style: italic;
-}
-
 .recent span {
   display: block;
 }

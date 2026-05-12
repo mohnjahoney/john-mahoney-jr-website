@@ -14,7 +14,7 @@ git@github.com:mohnjahoney/john-mahoney-jr-website.git
 
    ```sh
    git status
-   git add index.html styles.css script.js assets .nojekyll DEPLOYMENT.md
+   git add index.html styles.css script.js content assets .nojekyll DEPLOYMENT.md
    git commit -m "Prepare static site for GitHub Pages"
    git push origin main
    ```
@@ -144,7 +144,7 @@ mohnjahoney.github.io
 4. Commit and push:
 
    ```sh
-   git add index.html styles.css script.js assets DEPLOYMENT.md
+   git add index.html styles.css script.js content assets DEPLOYMENT.md
    git commit -m "Update site content"
    git push origin main
    ```

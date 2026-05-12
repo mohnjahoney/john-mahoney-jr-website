@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="A calm public home for John Mahoney, featuring selected recordings, performance history, and booking contact information."
+      content="A calm public home for a musician, featuring selected recordings, performance history, and booking contact information."
     >
-    <title>John Mahoney | Voice, Guitar & Acoustic Performance</title>
+    <title>Musician Website</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -15,7 +15,7 @@
 
     <header class="site-header">
       <nav class="nav" aria-label="Primary navigation">
-        <a class="nav__brand" href="#top" aria-label="John Mahoney home">John Mahoney</a>
+        <a class="nav__brand" href="#top" aria-label="Home" data-profile="navLabel">Home</a>
         <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links">
           <span class="nav__toggle-line"></span>
           <span class="nav__toggle-line"></span>
@@ -35,177 +35,88 @@
         <div class="hero__image-wrap reveal">
           <img
             class="hero__image"
-            src="assets/images/portrait-with-classical-guitar.jpg"
-            alt="John Mahoney seated with a classical guitar"
+            alt=""
+            data-profile-image="hero"
           >
         </div>
 
         <div class="hero__content reveal">
-          <p class="eyebrow">Voice, guitar, and acoustic performance</p>
-          <h1 id="hero-title">John Mahoney</h1>
-          <p class="hero__lede">
-            A singer, guitarist, and multi-instrumentalist with a warm hand in
-            folk songs, jazz standards, classical guitar, and community music.
-          </p>
-          <div class="hero__actions" aria-label="Primary actions">
-            <a class="button" href="#music">Listen</a>
-            <a class="button button--quiet" href="#performances">Upcoming dates</a>
-          </div>
+          <p class="eyebrow" data-profile="hero.eyebrow"></p>
+          <h1 id="hero-title" data-profile="name"></h1>
+          <p class="hero__lede" data-profile="hero.lede"></p>
+          <div class="hero__actions" aria-label="Primary actions" data-render="hero-actions"></div>
         </div>
       </section>
 
       <section class="section section--text" id="about" aria-labelledby="about-title">
         <div class="section__intro reveal">
-          <p class="eyebrow">About</p>
-          <h2 id="about-title">A grounded acoustic presence.</h2>
+          <p class="eyebrow" data-profile="about.eyebrow"></p>
+          <h2 id="about-title" data-profile="about.heading"></h2>
         </div>
 
         <div class="about-grid">
-          <div class="prose reveal">
-            <p>
-              John Mahoney is a Chico-based singer, guitarist, saxophonist, and
-              multi-instrumentalist whose musical life moves between solo guitar,
-              vocal standards, folk songs, tribute performances, and collaborative
-              community projects.
-            </p>
-            <p>
-              His recordings and appearances suggest a wide but connected musical
-              vocabulary: Leonard Cohen, Beatles material, Great American Songbook
-              standards, classical guitar gatherings, big-band settings, and more
-              experimental instrumental work. The throughline is attentive ensemble
-              playing, unhurried phrasing, and a respect for songs that have
-              gathered meaning through time.
-            </p>
-          </div>
+          <div class="prose reveal" data-render="about-copy"></div>
 
           <figure class="photo-note reveal">
             <img
-              src="assets/images/classical-guitar-for-Charlie-Robinson-tribute.jpeg"
-              alt="John Mahoney performing with classical guitar"
+              alt=""
+              data-profile-image="about"
             >
-            <figcaption>Solo guitar, voice, and intimate acoustic settings.</figcaption>
+            <figcaption data-profile="about.imageCaption"></figcaption>
           </figure>
         </div>
       </section>
 
       <section class="section media-section" id="music" aria-labelledby="music-title">
         <div class="section__intro reveal">
-          <p class="eyebrow">Music & Video</p>
-          <h2 id="music-title">Selected listening, kept deliberately small.</h2>
-          <p>
-            A short set of public recordings gives visitors a quick sense of
-            John's range without turning the page into an archive.
-          </p>
+          <p class="eyebrow" data-media="intro.eyebrow"></p>
+          <h2 id="music-title" data-media="intro.heading"></h2>
+          <p data-media="intro.text"></p>
         </div>
 
-        <div class="media-grid">
-          <article class="media-card media-card--wide reveal">
-            <div class="soundcloud-embed">
-              <iframe
-                title="Suzanne - Leonard Cohen by John Mahoney on SoundCloud"
-                src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/john-mahoney-jr/suzanne-leonard-cohen&color=%23c9a46f&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"
-                loading="lazy"
-                allow="autoplay"
-              ></iframe>
-            </div>
-            <div class="media-card__body">
-              <p class="eyebrow">Featured recording</p>
-              <h3>Suzanne - Leonard Cohen</h3>
-              <p>A direct, song-centered recording from John's public SoundCloud.</p>
-              <a class="text-link" href="https://soundcloud.com/john-mahoney-jr/suzanne-leonard-cohen">Open on SoundCloud</a>
-            </div>
-          </article>
-
-          <article class="media-card reveal">
-            <img
-              src="assets/images/singing-with-guitar-open-mic.jpg"
-              alt="John Mahoney singing and playing guitar at an open mic"
-            >
-            <div class="media-card__body">
-              <p class="eyebrow">Recordings</p>
-              <h3>Standards and songbook material</h3>
-              <p>Public tracks include "Tangerine," "Do Nothin' Til You Hear From Me," and "The Man I Love."</p>
-              <a class="text-link" href="https://soundcloud.com/john-mahoney-jr">Browse SoundCloud</a>
-            </div>
-          </article>
-
-          <article class="media-card reveal">
-            <img
-              src="assets/images/Lightfoot-Project-portrait-at-MONCA.jpeg"
-              alt="Portrait from a Gordon Lightfoot project performance"
-            >
-            <div class="media-card__body">
-              <p class="eyebrow">Project context</p>
-              <h3>Lightfoot-related material</h3>
-              <p>Project imagery can support future media notes without becoming a full gallery.</p>
-            </div>
-          </article>
-        </div>
+        <div class="media-grid" data-render="media"></div>
       </section>
 
       <section class="section performances" id="performances" aria-labelledby="performances-title">
         <div class="section__intro reveal">
-          <p class="eyebrow">Performances</p>
-          <h2 id="performances-title">Performance notes, kept current by hand.</h2>
+          <p class="eyebrow" data-performances="intro.eyebrow"></p>
+          <h2 id="performances-title" data-performances="intro.heading"></h2>
         </div>
 
         <div class="performance-layout">
           <div class="event-list reveal" aria-labelledby="upcoming-title">
             <h3 id="upcoming-title">Upcoming</h3>
-            <article class="event event--quiet">
-              <time>To be announced</time>
-              <div>
-                <h4>Upcoming public performances</h4>
-                <p>New dates will be posted here when confirmed.</p>
-              </div>
-              <a href="#contact" aria-label="Ask about upcoming performances">Inquire</a>
-            </article>
+            <div data-render="upcoming-events"></div>
           </div>
 
           <div class="recent reveal" aria-labelledby="recent-title">
             <h3 id="recent-title">Recent</h3>
-            <ul>
-              <li><span>Jun 2022</span> Saxophone on Molly Mahoney's <em>My Cousin Cole</em> release show, Chico Women's Club</li>
-              <li><span>Mar 2015</span> Vocalist for Jim Schmidt's Duke Ellington and Billy Strayhorn program, Chico Women's Club</li>
-              <li><span>Jan 2011</span> Classical Guitar Project with Warren Haskell, Tobin Roye, and Charlie Robinson, 1078 Gallery</li>
-            </ul>
+            <ul data-render="recent-performances"></ul>
           </div>
         </div>
       </section>
 
-      <section class="section image-band" aria-label="Performance contexts">
-        <figure class="reveal">
-          <img src="assets/images/big-band-Sinatra-show-at-Cafe-Coda.jpg" alt="Big band Sinatra show at Cafe Coda">
-          <figcaption>Big band standards</figcaption>
-        </figure>
-        <figure class="reveal">
-          <img src="assets/images/playing-Chapman-stick-Hawaii.jpeg" alt="Playing Chapman Stick outdoors in Hawaii">
-          <figcaption>Chapman Stick and experimental textures</figcaption>
-        </figure>
-        <figure class="reveal">
-          <img src="assets/images/John-and-Joey-singing-and-playing.jpg" alt="John and Joey singing and playing together">
-          <figcaption>Community and family music</figcaption>
-        </figure>
-      </section>
+      <section class="section image-band" aria-label="Performance contexts" data-render="photo-contexts"></section>
 
       <section class="section contact" id="contact" aria-labelledby="contact-title">
         <div class="contact__content reveal">
-          <p class="eyebrow">Contact</p>
-          <h2 id="contact-title">For bookings, music, and performance inquiries.</h2>
-          <p>
-            A confirmed public booking email has not been added yet. For now,
-            use the listening link below as the public point of reference, and
-            replace this note with direct contact details when ready.
-          </p>
-          <a class="contact-link" href="https://soundcloud.com/john-mahoney-jr">John Mahoney on SoundCloud</a>
+          <p class="eyebrow" data-contact="eyebrow"></p>
+          <h2 id="contact-title" data-contact="heading"></h2>
+          <p data-contact="text"></p>
+          <a class="contact-link" href="#" data-render="contact-link"></a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>&copy; 2026 John Mahoney. Music, performances, and selected recordings.</p>
+      <p data-profile="footer"></p>
     </footer>
 
+    <script src="content/profile.js"></script>
+    <script src="content/media.js"></script>
+    <script src="content/performances.js"></script>
+    <script src="content/photos.js"></script>
+    <script src="content/contact.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
